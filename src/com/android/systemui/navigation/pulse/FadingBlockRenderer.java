@@ -321,10 +321,6 @@ public class FadingBlockRenderer extends Renderer implements ColorAnimator.Color
                     UserHandle.USER_CURRENT);
             mLavaLamp.setAnimationColors(lavaLampColorFrom, lavaLampColorTo);
 
-            if (mLavaLampEnabled && mIsValidStream) {
-            mSmoothingEnabled = Settings.Secure.getIntForUser(resolver,
-                    Settings.Secure.FLING_PULSE_SMOOTHING_ENABLED, 0, UserHandle.USER_CURRENT) == 1;
-
             if (mLavaLampEnabled && mIsValidStream && !mPulseAccentColorEnabled) {
                 mLavaLamp.start();
             } else {
